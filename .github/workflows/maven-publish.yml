@@ -1,0 +1,32 @@
+name: build
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Install Maven
+        run: sudo apt-get update && sudo apt-get install -y maven
+      - name: Build Lobby plugin
+        run: mvn -q -f plugins/lobby/pom.xml -DskipTests package
+      - name: Stage plugins
+        run: |
+          mkdir -p server/data/plugins
+          cp plugins/lobby/target/lobby-1.0.0.jar server/data/plugins/
+          bash scripts/sync_plugins.sh
+      - name: Package server bundle
+        run: |
+          cd server
+          zip -r ../server-bundle.zip .
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-bundle
+          path: server-bundle.zip
