@@ -1,0 +1,14 @@
+name: Lobby
+main: com.yoann.lobby.LobbyPlugin
+version: 1.0.0
+api-version: '1.21'
+commands:
+  lobby:
+    description: lobby
+  setspawn:
+    description: set spawn
+permissions:
+  lobby.use:
+    default: true
+  lobby.setspawn:
+    default: op
