@@ -1,1 +1,5 @@
-https://download.luckperms.net/1532/bukkit/loader/LuckPerms-Bukkit-5.4.131.jar
+https://hangarcdn.papermc.io/plugins/ArcanePlugins/LevelledMobs/versions/4.3.2.1-b125/PAPER/LevelledMobs-4.3.2.1%20b125.jar
+https://hangarcdn.papermc.io/plugins/pop4959/Chunky/versions/1.4.40/PAPER/Chunky-Bukkit-1.4.40.jar
+https://hangarcdn.papermc.io/plugins/plazmer/TheDungeons/versions/4.0.9/PAPER/TheDungeons-4.0.9.jar
+https://github.com/MagmaGuy/EliteMobs/releases/download/v.8.5.2/EliteMobs.jar
+https://hangarcdn.papermc.io/plugins/EngineHub/WorldEdit/versions/7.3.16/PAPER/worldedit-bukkit-7.3.16.jar
